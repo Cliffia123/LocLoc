@@ -10,11 +10,9 @@ In this paper, we propose a unified framework that simultaneously improves local
 Overview of the proposed LocLoc, which consists of GrabCut Enhanced Generator (GEG) and Local Feature Digging Module (LFDG) to explore global and local representations for localization and classification, respectively.
 
 ## 🔑 Requirements
-Pytorch>=1.7.0
-
-torchvision>=0.8.1
-
-timm>=0.3.2
+Pytorch>=1.7.0<br>
+torchvision>=0.8.1<br>
+timm>=0.3.2<br>
 
 ## 🔮 Usage
 ### Start
@@ -61,4 +59,3 @@ python3 main_eval.py \
 ```
 ./scripts/eval_ilsvrc.sh
 ```
-
