@@ -27,11 +27,11 @@ cd LocLoc
 ```
 /path/to/CUB/
     class1/
-      img1.jpeg
+      img1.jpg
     class2/
-      img2.jpeg
+      img2.jpg
     class3/
-      img3.jpeg
+      img3.jpg
 ```
 
 ### Models
