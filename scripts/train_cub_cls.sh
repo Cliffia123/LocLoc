@@ -6,6 +6,6 @@ CUDA_VISIBLE_DEVICES=${gpu} python3 -m torch.distributed.launch --nproc_per_node
 --data-path /data/CUB_200_2011/images \
 --output_dir log \
 --resume log/deit_small_patch16_224.pth \
---epochs 300 \
+--epochs 100 \
 --data-set CUB \
 --lr 0.00015
