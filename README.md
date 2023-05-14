@@ -49,6 +49,14 @@ python3 main_eval.py \
 --classifier log/CUB_cls.pth \
 --locator log/CUB_loc.pth
 ```
+- To train the classfier model, you can run:
+```
+./scripts/mian_classifier.sh
+```
+- To train the classfier model, you can run:
+```
+./scripts/main_generator.sh
+```
 
 -  To test the CUB models, you can run :
 ```
