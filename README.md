@@ -35,7 +35,7 @@ cd LocLoc
 ```
 
 ### Models
-You can download the models for evaluation in [GoogleDrive](https://drive.google.com/drive/folders/1yBVYvyFSPdbkJxC57ooW-KdSC4s7GYVz?usp=share_link).
+You can download the models for evaluation soon.
 
 ### Inference
 It is a script example. You can change data_path and models positions according to your directory.
