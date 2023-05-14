@@ -51,11 +51,11 @@ python3 main_eval.py \
 ```
 - To train the classfier model, you can run:
 ```
-./scripts/mian_classifier.sh
+./scripts/train_cub/imsvrc_cls.sh
 ```
 - To train the generator model, you can run:
 ```
-./scripts/main_generator.sh
+./scripts/train_cub/ilsvrc_loc.sh
 ```
 
 -  To test the CUB models, you can run :
