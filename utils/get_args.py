@@ -1,7 +1,7 @@
 import argparse
 def get_args_parser():
     parser = argparse.ArgumentParser(
-        'LCTR training and evaluation script', add_help=False
+        'LocLoc training and evaluation script', add_help=False
     )
     parser.add_argument('--batch-size', default=32, type=int)
     parser.add_argument('--epochs', default=200, type=int)
