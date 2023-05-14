@@ -1,6 +1,6 @@
 import os
-bounding_boxes = '/GPUFS/nsccgz_ywang_zfd/caoxz/transformer/LCTR-master/datasets/CUB/bounding_boxes.txt'
-test = '/GPUFS/nsccgz_ywang_zfd/caoxz/transformer/LCTR-master/datasets/CUB/test.txt'
+bounding_boxes = '/datasets/CUB/bounding_boxes.txt'
+test = 'datasets/CUB/test.txt'
 image_id_list = []
 with open(test) as f:
     for line in f:
