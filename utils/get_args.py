@@ -299,7 +299,7 @@ def get_args_parser():
     )
     parser.add_argument(
         '--data-file',
-        default='/GPUFS/nsccgz_ywang_zfd/caoxz/transformer/LCTR-master/datasets/CUB',
+        default='datasets/CUB',
         type=str,
         help='dataset file',
     )
