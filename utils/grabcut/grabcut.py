@@ -51,12 +51,11 @@ class GrabCut:
         self.img = np.asarray(img, dtype=np.float64)
         self.rows, self.cols, _ = img.shape
 
-        self.mask = mask # * mask初始值都为0
+        self.mask = mask # * mask init 0
         if rect is not None:
             self.mask[rect[1]:rect[1] + rect[3],
-                      rect[0]:rect[0] + rect[2]] = DRAW_PR_FG['val'] # * rect 框的都看作是可能的前景，所以这个框必须最大限度去掉背景
-        # * 当前mask 有背景和可能的前景
-        self.classify_pixels() #* 统计前景和背景的点数
+                      rect[0]:rect[0] + rect[2]] = DRAW_PR_FG['val'] # * 
+        self.classify_pixels() 
 
         # Best number of GMM components K suggested in paper
         self.gmm_components = gmm_components
@@ -110,7 +109,7 @@ class GrabCut:
             np.square(_upright_diff), axis=2))
 
     def classify_pixels(self):
-        self.bgd_indexes = np.where(np.logical_or( #logical_or(x1,x2)有true，则true，np.where 返回index
+        self.bgd_indexes = np.where(np.logical_or( 
             self.mask == DRAW_BG['val'], self.mask == DRAW_PR_BG['val']))
         
         self.fgd_indexes = np.where(np.logical_or(
@@ -127,7 +126,7 @@ class GrabCut:
         self.bgd_gmm = GaussianMixture(self.img[self.bgd_indexes])
         self.fgd_gmm = GaussianMixture(self.img[self.fgd_indexes])
 
-    def assign_GMMs_components(self): #* 判定每个pixel属于哪个component,在comp_idxs上对应位置标明component的number
+    def assign_GMMs_components(self): #*
         """Step 1 in Figure 3: Assign GMM components to pixels"""
         self.comp_idxs[self.bgd_indexes] = self.bgd_gmm.which_component(
             self.img[self.bgd_indexes])
@@ -145,7 +144,7 @@ class GrabCut:
         bgd_indexes = np.where(self.mask.reshape(-1) == DRAW_BG['val'])
         fgd_indexes = np.where(self.mask.reshape(-1) == DRAW_FG['val'])
         
-        #* pr_indexes 是指 uncertain pixel
+        
         pr_indexes = np.where(np.logical_or(
             self.mask.reshape(-1) == DRAW_PR_BG['val'], self.mask.reshape(-1) == DRAW_PR_FG['val']))
 
@@ -163,7 +162,7 @@ class GrabCut:
         # a = [self.gc_source] * pr_indexes[0].size
         
         # print("a:",len(a))
-        _D = -np.log(self.bgd_gmm.calc_prob(self.img.reshape(-1, 3)[pr_indexes])) #* 计算 uncertain 的概率
+        _D = -np.log(self.bgd_gmm.calc_prob(self.img.reshape(-1, 3)[pr_indexes])) #* 
         self.gc_graph_capacity.extend(_D.tolist()) 
         assert len(edges) == len(self.gc_graph_capacity)
 
@@ -291,7 +290,7 @@ if __name__ == '__main__':
         os.makedirs(refined_mask)
 
     output_list = read_txt('files/train2.txt')
-    root = '/GPUFS/nsccgz_ywang_zfd/caoxz/data/CUB_200_2011/images'
+    root = 'data/CUB_200_2011/images'
     for idx, name in output_list.items():
         # print(idx, name)
         mask = read_mask(idx=int(idx))
