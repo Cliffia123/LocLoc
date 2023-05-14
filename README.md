@@ -53,7 +53,7 @@ python3 main_eval.py \
 ```
 ./scripts/mian_classifier.sh
 ```
-- To train the classfier model, you can run:
+- To train the generator model, you can run:
 ```
 ./scripts/main_generator.sh
 ```
