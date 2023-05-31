@@ -8,7 +8,7 @@ In this paper, we propose a unified framework that simultaneously improves local
 ## 🔑 Requirements
 Pytorch>=1.7.0<br>
 torchvision>=0.8.1<br>
-timm>=0.3.2<br>
+timm>=0.6.12<br>
 
 ## 🔮 Usage
 ### Start
