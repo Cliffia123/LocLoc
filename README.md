@@ -13,13 +13,15 @@ timm>=0.6.12<br>
 ## 🎃 Usage
 
 ### Start
-Download the CUB GrabCut files in [Google Drive](https://drive.google.com/drive/folders/15litgloea5to9qGbgY9pkjNC_WwHRWZw?usp=sharing).
+- Download the CUB GrabCut files in [Google Drive](https://drive.google.com/drive/folders/15litgloea5to9qGbgY9pkjNC_WwHRWZw?usp=sharing).
 
-Download the ILSVRC GrabCut files in [Pan.Baidu](https://pan.baidu.com/s/1UaC9Vo73Fm1sKEMJG_aCZQ?pwd=Locm) with code "Locm"
+- Download the ILSVRC GrabCut files in [Pan.Baidu](https://pan.baidu.com/s/1UaC9Vo73Fm1sKEMJG_aCZQ?pwd=Locm) with code "Locm"
 
-cd LocLoc
+- cd LocLoc
 
-Unfold the GrabCut files folder and put the GrabCut files in datasets
+- Unfold the GrabCut files folder and put the GrabCut files in datasets
+
+*You can also use the GrabCut code [here](https://github.com/Cliffia123/GrabCut.git) to generate your GrabCut-Enhanced Masks*
 
 ### Datasets
 - CUB: http://www.vision.caltech.edu/visipedia/CUB-200-2011.html
