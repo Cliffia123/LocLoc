@@ -10,12 +10,16 @@ Pytorch>=1.7.0<br>
 torchvision>=0.8.1<br>
 timm>=0.6.12<br>
 
-## 🔮 Usage
+## 🎃 Usage
+
 ### Start
-```
-Download files in  https://anonymous.4open.science/r/LocLoc-D3DE/
+Download the CUB GrabCut files in [Google Drive](https://drive.google.com/drive/folders/15litgloea5to9qGbgY9pkjNC_WwHRWZw?usp=sharing).
+
+Download the ILSVRC GrabCut files in [Pan.Baidu]()
+
 cd LocLoc
-```
+
+Unfold the GrabCut files folder and put the GrabCut files in datasets
 
 ### Datasets
 - CUB: http://www.vision.caltech.edu/visipedia/CUB-200-2011.html
@@ -31,7 +35,7 @@ cd LocLoc
 ```
 
 ### Models
-You can download the models for evaluation soon.
+You can download the [models](https://drive.google.com/drive/folders/1D9tMZjXqlPVDzRIi_18zRwF4kWwuSfZt?usp=sharing) for evaluation.
 
 ### Inference
 It is a script example. You can change data_path and models positions according to your directory.
@@ -45,21 +49,18 @@ python3 main_eval.py \
 --classifier log/CUB_cls.pth \
 --locator log/CUB_loc.pth
 ```
-- To train the classfier model, you can run:
+
+- To train the CUB/ILSVRC classfier model, you can run:
 ```
-./scripts/train_cub/imsvrc_cls.sh
-```
-- To train the generator model, you can run:
-```
-./scripts/train_cub/ilsvrc_loc.sh
+./scripts/train_cub_cls.sh and train_ilsvrc_loc.sh
 ```
 
--  To test the CUB models, you can run :
+- To train the CUB/ILSVRC generator model, you can run:
 ```
-./scripts/eval_cub.sh
+./scripts/train_cub_loc.sh and train_ilsvrc_loc.sh
 ```
 
-- To test the ILSVRC models, you can run :
+-  To test the CUB/ILSVRC models, you can run :
 ```
-./scripts/eval_ilsvrc.sh
+./scripts/eval_cub.sh and eval_ilsvrc.sh
 ```
