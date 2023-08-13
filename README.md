@@ -15,7 +15,7 @@ timm>=0.6.12<br>
 ### Start
 Download the CUB GrabCut files in [Google Drive](https://drive.google.com/drive/folders/15litgloea5to9qGbgY9pkjNC_WwHRWZw?usp=sharing).
 
-Download the ILSVRC GrabCut files in [Pan.Baidu]()
+Download the ILSVRC GrabCut files in [Pan.Baidu](https://pan.baidu.com/s/1UaC9Vo73Fm1sKEMJG_aCZQ?pwd=Locm) with code "Locm"
 
 cd LocLoc
 
