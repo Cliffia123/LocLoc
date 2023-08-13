@@ -64,3 +64,48 @@ python3 main_eval.py \
 ```
 ./scripts/eval_cub.sh and eval_ilsvrc.sh
 ```
+### Code structure
+
+```
+|-- datasets
+|   |-- CUB
+|   |   |-- bounding_boxes.txt
+|   |   |-- ...
+|   |   `-- train_test_split.txt
+|   |-- GrabCutCUB
+|   |   |-- cub_grabcut_train.h5
+|   |   `-- cub_grabcut_val.h5
+|   |-- GrabCutIMNET
+|   |   |-- imagenet_grabcut_train.h5
+|   |   `-- imagenet_grabcut_val.h5
+|   `-- IMNET
+|       |-- train.txt
+|       |-- ...
+|       `-- val_folder.txt
+|-- engine.py
+|-- log
+|   |-- CUB_cls_best.pth
+|   |-- CUB_loc_best.pth
+|   |-- IMNET_cls_best_50.pth
+|   |-- IMNET_loc_best_50.pth
+|   `-- deit_small_patch16_224.pth
+|-- main_classifier.py
+|-- main_eval.py
+|-- main_generator.py
+|-- modules
+|   |-- __init__.py
+|   |-- __pycache__
+|   |-- dino.py
+|   |-- ...
+|   `-- vision_transformer.py
+|-- scripts
+|   |-- eval_cub.sh
+|   |-- ...
+|   `-- train_ilsvrc_loc.sh
+`-- utils
+    |-- __pycache__
+    |-- cub_feat.py
+    |-- datasets.py
+    |-- ...
+    `-- vis_tools.py
+```
